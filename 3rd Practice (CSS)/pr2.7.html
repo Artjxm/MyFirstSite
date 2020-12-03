@@ -2,19 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Практическая работа №2 - задача 7</title>
-  <style>
-    em {
-      color: #ff0000;
+<title>Практическая работа №2 - задача 7</title>
+  <script>
+    function check(attr) {
+      switch (attr) {
+        case 1: {
+          document.getElementById('username').className="valid";
+        }
+      }
     }
+  </script>
+  <style>
+    /*???*/
   </style>
 </head>
 <body>
-<fieldset>
-  <p><label for="name"><em>*</em> Username </label><input type="text" id="name"></p>
-  <p><label> <em>*</em> How old are you?
-    <input>
-  </label></p>
-</fieldset>
+<p>
+  <label for="username">Username</label>
+  <input type="text" name="username" required pattern="[A-Za-zА-Яа-яЁё]"
+         placeholder="Input your username" oninput="check(this, 1)"><span id="username"></span>
+</p>
 </body>
 </html>
+
