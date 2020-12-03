@@ -8,19 +8,67 @@
       switch (attr) {
         case 1: {
           document.getElementById('username').className="valid";
+          break;
+        }
+        case 2: {
+          document.getElementById('age').className="valid";
+          break;
+        }
+        case 3: {
+          document.getElementById('gender').className='valid';
+          break;
+        }
+        case 4: {
+          document.getElementById('password').className='valid';
+          break;
         }
       }
     }
   </script>
   <style>
-    /*???*/
+    .invalid::before {
+      content: "\002A";
+      color: #ff4747;
+    }
+    .valid::before {
+      content: "\2713";
+      color: #70ff59;
+    }
   </style>
 </head>
 <body>
 <p>
-  <label for="username">Username</label>
-  <input type="text" name="username" required pattern="[A-Za-zА-Яа-яЁё]"
-         placeholder="Input your username" oninput="check(this, 1)"><span id="username"></span>
+  <label for="username"><span id="username" class="invalid"></span>Username
+    <input type="text" name="username" required pattern="[A-Za-zА-Яа-яЁё]"
+           placeholder="Your username ;^)" oninput="check(1)">
+  </label>
+</p>
+<p>
+  <label for="age"><span id="age" class="invalid"></span>Age
+    <input type="number" name="age" placeholder="Since you were born bruh!"
+    oninput="check(2)">
+  </label>
+</p>
+<p>
+  <label for="gender"><span id="gender" class="invalid"></span>Gender
+    <input type="radio" name="gender" value="g1"
+    oninput="check(3)">Male
+  <input type="radio" name="gender" value="g1"
+    oninput="check(3)">Female
+  <input type="radio" name="gender" value="g1"
+    oninput="check(3)">Humanoid
+  <input type="radio" name="gender" value="g1"
+    oninput="check(3)">Truck Freak
+  </label>
+</p>
+<p>
+  <label for="password"><span id="password" class="invalid"></span>Password
+  <input type="password" name="password" placeholder="Super secret word here"
+  oninput="check(4)">
+  </label>
+</p>
+<p>
+  <input type="submit" value="Proceed">
 </p>
 </body>
 </html>
