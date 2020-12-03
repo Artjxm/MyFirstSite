@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ball</title>
+</head>
+<body>
+ <canvas id="canvas" width="600" height="600"></canvas>
+<script>
+  var canvas = document.getElementById('canvas');
+  var ctx = canvas.getContext('2d');
+  var words = ["orange", "indigo", "coral", "forestgreen", "lightcoral", "midnightblue"];
+  var Ball = function() {
+    this.x = 300;
+    this.y = 300;
+    this.xSpeed = Math.random() * 10 - 5;
+    this.ySpeed = Math.random() * 10 - 5;
+    this.color = pickRandColor(words);
+  };
+
+  var circle = function(x, y, radius, color) {
+    ctx.beginPath();
+    ctx.arc(x, y, radius, 0, Math.PI * 2, false);
+    ctx.fillStyle = color;
+    ctx.fill();
+
+  };
+
+  Ball.prototype.draw = function() {
+    circle(this.x, this.y, 15, this.color);
+  };
+
+  Ball.prototype.move = function() {
+    this.x += this.xSpeed;
+    this.y += this.ySpeed;
+  };
+
+  Ball.prototype.checkCollision = function() {
+    if (this.x < 15 || this.x > 585)
+      this.xSpeed = - this.xSpeed;
+
+    if (this.y < 15 || this.y > 585)
+      this.ySpeed = - this.ySpeed;
+  };
+
+  var pickRandColor = function(words) {
+    return words[Math.floor(Math.random() * words.length)];
+  };
+
+  var balls = [];
+
+  for (var i = 0; i < 250; ++i) {
+    balls[i] = new Ball();
+  }
+
+  setInterval(function () {
+    ctx.clearRect(0, 0, 600, 600);
+    for (var i = 0; i < 250; ++i) {
+      balls[i].draw();
+      balls[i].move();
+      balls[i].checkCollision();
+
+      // for (var j = 0; j < 10; ++j)
+      //   for (var k = 0; k < 10; ++k) {
+      //     if (balls[j].x === balls[k].x) {
+      //       balls[j].xSpeed = - balls[j].xSpeed;
+      //       balls[k].xSpeed = - balls[k].xSpeed;
+      //     }
+      //
+      //     if (balls[j].y === balls[k].y) {
+      //       balls[j].ySpeed = - balls[k].ySpeed;
+      //       balls[j].ySpeed = - balls[k].ySpeed;
+      //     }
+      //   }
+    }
+    ctx.lineWidth = 15;
+    ctx.strokeRect(0, 0, 600, 600);
+  }, 10);
+
+</script>
+</body>
+</html>

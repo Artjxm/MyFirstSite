@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Canvas</title>
+  <style>
+    h1 {
+      font-family: "FORTNITE BATTLEFEST",serif;
+      color: #b34040;
+      font-size: 300%;
+    }
+  </style>
+</head>
+<body>
+<canvas id="canvas" width="600" height="600">
+
+</canvas>
+<script>
+  var canvas = document.getElementById("canvas");
+  var ctx = canvas.getContext("2d");
+  // ctx.fillStyle= "#a7705b";
+  // ctx.fillRect(70, 0, 50, 50);
+  // ctx.fillStyle= "#ec362f";
+  // ctx.fillRect(70, 0, 50, 20);
+  // ctx.fillStyle= "#a7705b";
+  // ctx.fillRect(90, 50, 10, 20);
+  // ctx.fillRect(60, 70, 70, 60);
+  // ctx.fillRect(0, 70, 190, 10);
+  // ctx.fillRect(60, 130, 20, 60);
+  // ctx.fillRect(110, 130, 20, 60);
+  // ctx.fillStyle= "#0040ff";
+  // ctx.fillRect(60, 120, 35, 10);
+  // ctx.fillStyle= "#ffffff";
+  // ctx.fillRect(95, 120, 35, 10);
+  // ctx.fillStyle= "#ff1818";
+  // ctx.fillRect(95, 120, 35, 2);
+  // ctx.fillRect(95, 124, 35, 2);
+  // ctx.fillRect(95, 128, 35, 2);
+  //
+  // ctx.strokeStyle = "#c85f5f";
+  // ctx.lineWidth = 5;
+  // ctx.beginPath();
+  // ctx.moveTo(275, 8);
+  // ctx.lineTo(325, 8);
+  // ctx.lineTo(325, 46);
+  // ctx.lineTo(275, 46);
+  // ctx.lineTo(275, 8);
+  // ctx.stroke();
+
+  var circle = function(x, y, radius, fillCicrle) {
+    ctx.beginPath();
+    ctx.arc(x, y, radius, 0, Math.PI*2, false);
+    if(fillCicrle)
+      ctx.fill();
+    else
+      ctx.stroke();
+  };
+
+  var drawBee = function (x, y) {
+    ctx.lineWidth = 4;
+    ctx.strokeStyle = "black";
+    ctx.fillStyle = "gold";
+    circle(x, y, 32, true);
+    circle(x, y, 32, false);
+    circle(x-20, y-44, 17, false);
+    circle(x+20, y-44, 17, false);
+    ctx.fillStyle = "#cffeff";
+    circle(x-8, y-5, 8, true);
+    circle(x+8, y-5, 8, true);
+
+    ctx.fillStyle = "#000000";
+    circle(x-8, y-5, 8, false);
+    circle(x+8, y-5, 8, false);
+  };
+
+  drawBee(100, 100);
+
+  var updatePosition = function (coord) {
+    var offset = Math.random() * 4-2;
+    coord += offset;
+    if (coord > 600)
+      coord = 600;
+    if (coord < 0)
+      coord = 0;
+
+    return coord;
+  }
+
+  var x = y = 300;
+  setInterval(function () {
+    ctx.clearRect(0, 0, 600, 600);
+    drawBee(x, y);
+    x = updatePosition(x);
+    y = updatePosition(y);
+    ctx.strokeRect(0, 0, 600, 600);
+  },  30);
+
+  // ctx.lineWidth = 3;
+  // ctx.strokeStyle = "#ffd500";
+  // circle(100, 100, 50);
+  // ctx.strokeStyle = "#ff8c00";
+  // circle(100, 100, 60);
+  // ctx.strokeStyle = "#ff0000";
+  // circle(100, 100, 70);
+  // ctx.strokeStyle = "#be0000";
+  // circle(100, 100, 80);
+
+  // ctx.strokeStyle = "#edfffc";
+  // ctx.fillStyle = "#edfffc";
+  // circle(100, 100, 50);
+  // circle(100, 180, 60);
+  // circle(100, 280, 70);
+  //
+  // ctx.fillStyle = "#000000";
+  // circle(100, 160, 5);
+  // circle(100, 180, 5);
+  // circle(100, 200, 5);
+  //
+  // circle(80, 110, 2);
+  // circle(90, 116, 2);
+  // circle(99, 120, 2);
+  // circle(113, 116, 2);
+  // circle(120, 110, 2);
+  //
+  // ctx.strokeStyle = "#ff9f52";
+  // ctx.lineWidth = 5;
+  // ctx.beginPath();
+  // ctx.moveTo(100, 100);
+  // ctx.lineTo(140, 115);
+  // ctx.stroke();
+  //
+  // ctx.fillStyle = "#534e4e";
+  // circle(80, 90, 7);
+  // circle(120, 90, 7);
+  //
+  // ctx.strokeStyle = "#a46e4b";
+  // ctx.lineWidth = 3;
+  // ctx.beginPath();
+  // ctx.moveTo(50, 180);
+  // ctx.lineTo(20, 240);
+  // ctx.stroke();
+  //
+  // ctx.beginPath();
+  // ctx.moveTo(15, 230);
+  // ctx.lineTo(28, 225);
+  // ctx.lineTo(31, 240);
+  // ctx.stroke();
+  //
+  // ctx.beginPath();
+  // ctx.moveTo(150, 170);
+  // ctx.lineTo(180, 110);
+  // ctx.stroke();
+  //
+  // ctx.beginPath();
+  // ctx.moveTo(165, 115);
+  // ctx.lineTo(170, 130);
+  // ctx.lineTo(185, 130);
+  // ctx.stroke();
+
+  // var size = 0;
+  // ctx.fillStyle = "#588c5b";
+  // setInterval(function () {
+  //   ctx.clearRect(0, 0, 600, 600);
+  //   ctx.fillRect(0, 0, size, size);
+  //   ++size;
+  //   if (size > 600) {
+  //     size = 0;
+  //   }
+  // }, 11)
+
+
+
+</script>
+</body>
+</html>

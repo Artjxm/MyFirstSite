@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Doc</title>
+</head>
+<body>
+<h1 id="heading">Space shuttle.jpeg</h1>
+<img id="image" src="icon.png">
+<h1 id="heading2">I mark your click!</h1>
+<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+<script>
+  // function WakeUp() {
+  //   alert("Wake the fuck up! You've shitted your pant");
+  // }
+  // var WakeUpID = setTimeout(WakeUp, 2000);
+  // // clearTimeout(WakeUpID);
+  // setInterval(WakeUp, 3000);
+  // let counter = 1;
+  // function PrintMsg() {
+  //   console.log("Youve slayed " + counter + (counter == 1 ? " god" : " gods"));
+  //   ++counter;
+  // };
+  // setInterval(PrintMsg, 5000);
+
+  // let leftOffset = 0;
+  // function MoveHeading() {
+  //   $("#heading").offset({"left": leftOffset});
+  //   ++leftOffset;
+  //   if (leftOffset > 500) {leftOffset = 0;}
+  // }
+  // setInterval(MoveHeading, 30);
+
+  // function ClickHandler(event) {
+  //   console.log("Missile dropped at " +  '(' + event.pageX + ", " + event.pageY + ')');
+  // }
+  // $("html").click(ClickHandler);
+  $("html").mousedown(function (event) {
+    $("#heading2").offset({left: event.pageX, top : event.pageY});
+  });
+
+  // function ShiftRight() {
+  //   do {
+  //     $("#heading").offset({left: lefOrRight, top : topOrDown});
+  //     ++lefOrRight;
+  //   } while (lefOrRight < 600);
+  //
+  // }
+  //
+  // function ShiftDown() {
+  //   do {
+  //     $("#heading").offset({left: lefOrRight, top: topOrDown});
+  //     ++topOrDown;
+  //   } while (topOrDown < 600);
+  // }
+  //
+  // function ShiftLeft() {
+  //   do {
+  //     $("#heading").offset({left: lefOrRight, top : topOrDown});
+  //     --lefOrRight;
+  //   } while (lefOrRight > 0);
+  // }
+  //
+  // function ShiftUp() {
+  //    do {
+  //      $("#heading").offset({left: lefOrRight, top: topOrDown});
+  //      --topOrDown;
+  //    } while (topOrDown > 0);
+  // }
+
+
+
+  var leftOffset = 0;
+  var topOffset = 0;
+  let flag = 0;
+
+  var movement = function () {
+    $("#image").offset({
+      left: leftOffset,
+      top: topOffset
+    });
+
+    if (flag === 0) {
+      leftOffset++;
+      if (leftOffset > 200) {
+        leftOffset = 200;
+
+        topOffset++;
+        if (topOffset > 200) {
+          topOffset = 200;
+          flag = 2;
+        }
+      }
+      console.log(flag);
+    }
+
+    if (flag === 2) {
+      if (leftOffset > 0)
+        --leftOffset;
+      if (leftOffset === 0)
+        --flag;
+      }
+
+    if (flag === 1) {
+      --topOffset;
+      if (topOffset === 0)
+        flag = 0;
+      console.log(flag);
+    }
+  };
+
+  setInterval(movement, 0);
+
+</script>
+</body>
+</html>
