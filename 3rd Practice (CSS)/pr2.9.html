@@ -3,8 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <title>Практическая работа №2 - задача 9</title>
+
+  <style>
+    #first:checked ~ .text1 {
+      background: yellow;
+    }
+    #second:checked ~ .text2 {
+      background: yellow;
+    }
+    #third:checked ~ .text3 {
+      background: yellow;
+    }
+    #fourth:checked ~ .text4 {
+      background: yellow;
+    }
+    ul.list {
+      display: inline;
+      margin: 0;
+    }
+  </style>
 </head>
 <body>
-
+<ul class="list">
+  <li>
+    <p><input type="checkbox" id="first"><span class="text1">HTML</span></p>
+    <p><input type="checkbox" id="second"><span class="text2">CSS</span></p>
+    <p><input type="checkbox" id="third"><span class="text3">JS</span></p>
+    <p><input type="checkbox" id="fourth"><span class="text4">U</span></p>
+  </li>
+  <li>
+    <input type="submit">
+  </li>
+</ul>
 </body>
 </html>
