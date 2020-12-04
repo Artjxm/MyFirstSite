@@ -17,23 +17,29 @@
     #fourth:checked ~ .text4 {
       background: yellow;
     }
-    ul.list {
-      display: inline;
-      margin: 0;
+
+    .outer {
+      position: relative;
     }
+
+    .inner {
+      height: 100px;
+      position: absolute;
+      top: 50%;
+      margin-top: -50px;
+      margin-left: 80px;
+    }
+
   </style>
 </head>
 <body>
-<ul class="list">
-  <li>
-    <p><input type="checkbox" id="first"><span class="text1">HTML</span></p>
-    <p><input type="checkbox" id="second"><span class="text2">CSS</span></p>
-    <p><input type="checkbox" id="third"><span class="text3">JS</span></p>
-    <p><input type="checkbox" id="fourth"><span class="text4">U</span></p>
-  </li>
-  <li>
-    <input type="submit">
-  </li>
-</ul>
+<div class="left">
+  <input type="checkbox" id="first"><span class="text1">HTML</span><br>
+  <input type="checkbox" id="second"><span class="text2">CSS</span><br>
+  <input type="checkbox" id="third"><span class="text3">JS</span><br>
+  <input type="checkbox" id="fourth"><span class="text4">U</span><br>
+</div>
+<div class="outer"><div class="inner"><input type="submit" id="submit"></div></div>
+
 </body>
 </html>
