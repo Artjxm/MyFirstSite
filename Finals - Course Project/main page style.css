@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .hat {
   margin-right: auto;
   margin-left: auto;
@@ -34,4 +39,20 @@ ul {
 .menu-list a:hover {
   background-color: #fff9f9;
   color: #333333;
+}
+
+p {
+  padding: 30px;
+  background: #dbdbdb;
+  border: 2px gray dashed;
+  width: 200px;
+  margin-left: 20px;
+}
+
+#sub {
+  vertical-align: text-bottom;
+}
+
+#sup {
+  vertical-align: baseline;
 }
