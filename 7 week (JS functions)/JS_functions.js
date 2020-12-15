@@ -26,8 +26,8 @@ var generateRusult = function () {
   var RandomWords = ["крыса", "вобла", "плотва", "мышь", "псина", "выдра"];
   return "У тебя " + pickRandWords(RandomBodyParts) + " будто " + pickRandWords(RandomAdjectives) + " " + pickRandWords(RandomWords);
 }
-var ChosenBodyPart = RandomBodyParts[Math.floor(Math.random()RandomBodyParts.length)];
-var ChosenAdjective = RandomAdjectives[Math.floor(Math.random()RandomAdjectives.length)];
+var ChosenBodyPart = RandomBodyParts[Math.floor(Math.random().RandomBodyParts.length)];
+var ChosenAdjective = RandomAdjectives[Math.floor(Math.random().RandomAdjectives.length)];
 var ChosenWord = RandomWords[Math.floor(Math.random()*RandomWords.length)];
 alert("У тебя "+ChosenBodyPart+" будто "+ChosenAdjective+ " "+ChosenWord);
 

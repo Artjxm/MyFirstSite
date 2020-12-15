@@ -1,58 +1,48 @@
-* {
+* { /* Подчищаем отсупы и поля */
   margin: 0;
   padding: 0;
+
 }
 
-.hat {
-  margin-right: auto;
-  margin-left: auto;
+body {
+  background: url("src/backgruuund.png") center no-repeat;
+}
+
+.center-side {
+  width: 60%;
+  margin: auto;
+  text-align: center; /* центрируем всЁ */
 }
 
 .menu-list {
-  padding: 0;
-  margin: 0;
   list-style-type: none; /* Убираем маркеры */
-  width: 100px;
-}
-
-ul {
   display: inline-flex; /* горизонтальное расположение элементов */
-  align-items: center; /* вертикальное центрирование элементов */
-
 }
 
 .menu-list a {
   text-decoration: none; /* убираем подчеркивание ссылок */
-  padding: 80px 20px 80px;
+  padding: 90px 20px;
   font-weight: bold;
   display: block;
   color: #333333;
   white-space: nowrap;
-  font-family: "Courier New", serif;
+  font-family: "Bauhaus 93", serif;
 }
 
 .menu-list .link-logo {
   padding: 0; /* Избавляемся от рамок вокруг изображения */
-  width: 1%; /* Мера по избавлению от назойливой полоски под изображением */
+  height: 200px; /* фиксированная высота */
 }
 
 .menu-list a:hover {
-  background-color: #fff9f9;
-  color: #333333;
+  background-color: #f1d7d7;
 }
 
-p {
-  padding: 30px;
-  background: #dbdbdb;
-  border: 2px gray dashed;
-  width: 200px;
-  margin-left: 20px;
+.main-about {
+  border: 2px dashed orange;
+  top:220px; /*это важно*/
 }
 
-#sub {
-  vertical-align: text-bottom;
-}
-
-#sup {
-  vertical-align: baseline;
+.footer {
+  bottom: 5px; /*это тоже важно*/
 }
