@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Ювелирный магазин</title>
-<!-- Подключаем внешние файлы стилей и скриптов -->
-  <link rel="stylesheet" href="main%20page%20style.css" type="text/css">
+<!-- Подключаем внешние файлы стилей, иконок и скриптов -->
+  <link rel="stylesheet" href="skeleton-style.css" type="text/css">
+  <link rel="stylesheet" href="index-style.css" type="text/css">
+
   <link rel="shortcut icon" href="src/favicon/favicon.ico" type="image/png">
   <link rel="icon" type="image/png" sizes="32x32" href="src/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="src/favicon/favicon-16x16.png">
@@ -12,50 +14,41 @@
   <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
 </head>
 <body>
-<!--
-ПЛАН:
-Шапка с меню и ссылочной картинкой на главную страницу
-ассортимент
--страницы каждого товара
-футер с ссылками
--->
-<div class="container">
-  <div class="center-side">
-    <header>
-      <nav class="header-nav">
-        <ul class="menu-list">
-          <li><a href="index.html">О магазине</a></li>
-          <li><a href="page-catalogue.html">Каталог</a></li>
-          <li><div  class="link-logo">
-            <object data="src/nicerLogo.svg" width="450px" height="200px">broke</object>
-          </div></li>
-          <li><a href="page-gallery.html">Галерея</a></li>
-          <li><a href="#footer">Контакты</a></li>
-        </ul>
-      </nav>
-    </header>
+<!-- Данная страница отображает описание интернет-магазина -->
 
-    <main>
-      <div class="main-about">
-        <div class="main-image">
+<div class="navigation">
+  <ul class="menu-list">
+    <li><a href="index.html">О магазине</a></li>
+    <li><a href="page-catalogue.html">Каталог</a></li>
+    <li><div  class="link-logo">
+      <object data="src/nicerLogo2.svg" width="450px" height="200px">broke</object>
+    </div></li>
+    <li><a href="page-gallery.html">Галерея</a></li>
+    <li><a href="#footer">Контакты</a></li>
+  </ul>
+</div>
+
+<div class="wrapper content">
+      <div class="content-about">
+        <div class="about-image">
           <img src="src/ringsOnLeaf.jpg" alt="ring on leaf"  style="width: 450px">
         </div>
-        <article class="main-article">
+        <article class="about-article">
           <p>
             <span class="firstLetter">
             М</span>ы рады приветствовать вас на сайте нашего ювелирного мазагина!
-            <br>Здесь вы можете полюбоваться ювелирными изделиями из чистого золота и серебра и даже заказать подарок себе или близкому человеку.
-          Для начала шоппинга нажмите <a href="page-catalogue.html">сюда</a> или на пункт "Каталог" в меню.</p>
+            <br>Здесь вы можете полюбоваться ювелирными изделиями из чистого золота
+            и серебра и даже заказать подарок себе или близкому человеку.
+          Для начала шоппинга нажмите <a href="page-catalogue.html">сюда</a>
+            или на пункт "Каталог" в меню.</p>
         </article>
       </div>
-    </main>
-
-    <footer>
-      <div id="footer"><p>Московка Артём Александрович ИКБО-20-19</p></div>
-    </footer>
-  </div>
 </div>
 
+
+<div id="footer"><p>Московка Артём Александрович
+  ИКБО-20-19<br>РТУ МИРЭА 2020</p>
+</div>
 
 </body>
 </html>

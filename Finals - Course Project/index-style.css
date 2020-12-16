@@ -1,0 +1,17 @@
+/*Данный файл содержит оформление страницы index(page-about)*/
+.firstLetter {
+  color: #7c6976;
+  font-size: 2em;
+}
+
+.content-about {
+  /*display: inline-flex;*/
+  border: 2px dashed blueviolet;
+}
+
+.about-article {
+  font-family: Bahnschrift, serif;
+  font-style: oblique;
+  border: 2px dashed orange;
+
+}

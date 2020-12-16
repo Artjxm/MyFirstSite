@@ -1,0 +1,65 @@
+/*Данный файл содержит в себе всё необходимое для внешней структуры документа,
+ его заднего фона, шапки, футера, внешних блоков и их расположения*/
+
+* { /* Подчищаем отсупы и поля */
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth; /*Плавная прокрутка к якорю*/
+  transition: .3s linear; /*Более плавный и переход при масштабировании*/
+}
+
+html, body {
+  height: 100%; /*Важно для отображения футера*/
+}
+
+body {
+  background: #888888;
+  background: url("src/backgruuund.png") center no-repeat; /*Фон*/
+  width: 60%;
+  margin: auto;
+  text-align: center; /* Центрируем текст страницы */
+
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-list {
+  list-style-type: none; /* Убираем маркеры */
+  display: inline-flex; /* Горизонтальное расположение элементов */
+}
+
+.menu-list a {
+  text-decoration: none; /* Убираем подчеркивание ссылок */
+  padding: 90px 20px;
+  font-weight: bold;
+  display: block;
+  color: #333333;
+  white-space: nowrap;
+  font-family: Bahnschrift, serif;
+}
+
+.menu-list .link-logo {
+  padding: 0; /* Избавляемся от рамок вокруг изображения */
+  height: 200px; /* Фиксированная высота */
+}
+
+.menu-list a:hover {
+  background-color: #f1d7d7;
+  opacity:  55%;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+#footer {
+  flex-shrink: 0;
+}
+
+.content {
+  border: 2px dashed #a4a4a4;
+}
+
+#footer {
+  border: 2px dashed #6e6e6e;
+}
