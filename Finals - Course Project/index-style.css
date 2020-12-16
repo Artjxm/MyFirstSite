@@ -1,17 +1,43 @@
 /*Данный файл содержит оформление страницы index(page-about)*/
 .firstLetter {
-  color: #7c6976;
+  color: #ffdc49;
   font-size: 2em;
 }
 
 .content-about {
-  /*display: inline-flex;*/
+  display: inline-flex;
   border: 2px dashed blueviolet;
+  height: 700px;
+  flex-wrap: wrap;
 }
 
 .about-article {
   font-family: Bahnschrift, serif;
+  font-size: 18px;
   font-style: oblique;
-  border: 2px dashed orange;
+  width: 420px;
+  height: 317px;
+  padding: 30px;
+  margin: 20px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  background: url("src/water/water.jpg") 70%;
+  color: #ffffff;
 
 }
+
+.about-image {
+  border: 2px dashed #ffdc49;
+  width: 450px;
+  height: 337px;
+  margin: 20px;
+}
+
+.content a {
+  color: #ffdc49;
+  font-weight: 1000;
+  background: #1f3888;
+
+}
+

@@ -6,6 +6,7 @@
   padding: 0;
   scroll-behavior: smooth; /*Плавная прокрутка к якорю*/
   transition: .3s linear; /*Более плавный и переход при масштабировании*/
+  text-decoration: none; /* Убираем подчеркивание ссылок */
 }
 
 html, body {
@@ -26,10 +27,10 @@ body {
 .menu-list {
   list-style-type: none; /* Убираем маркеры */
   display: inline-flex; /* Горизонтальное расположение элементов */
+  height: 200px;
 }
 
 .menu-list a {
-  text-decoration: none; /* Убираем подчеркивание ссылок */
   padding: 90px 20px;
   font-weight: bold;
   display: block;
@@ -44,7 +45,7 @@ body {
 }
 
 .menu-list a:hover {
-  background-color: #f1d7d7;
+  background-color: #fcf1f1;
   opacity:  55%;
 }
 
@@ -58,8 +59,11 @@ body {
 
 .content {
   border: 2px dashed #a4a4a4;
+  position: relative;
 }
 
 #footer {
   border: 2px dashed #6e6e6e;
+  font-family: Bahnschrift, serif;
 }
+
