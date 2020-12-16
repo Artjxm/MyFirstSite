@@ -26,7 +26,7 @@ body {
   display: block;
   color: #333333;
   white-space: nowrap;
-  font-family: "Bauhaus 93", serif;
+  font-family: Bahnschrift, serif;
 }
 
 .menu-list .link-logo {
@@ -54,7 +54,11 @@ body {
   font-size: 2em;
 }
 
+.main-about {
+  display: inline-flex;
+}
+
 .main-article {
-  font-family: "Bauhaus 93", sans-serif;
+  font-family: Bahnschrift, Calibri, Consolas, sans-serif;
   font-style: oblique;
 }
