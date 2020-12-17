@@ -14,7 +14,7 @@
   align-items: flex-start;
 }
 
-.about-article1 {
+.about-article {
   /*Текстовый блок на голубом фоне*/
   font-family: Bahnschrift, serif;
   font-size: 18px;
@@ -26,24 +26,15 @@
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  background: url("src/water/water.jpg") 70%;
   color: #ffffff;
 }
 
-.about-article2 {
-  /*Текстовый блок на голубом фоне*/
-  font-family: Bahnschrift, serif;
-  font-size: 18px;
-  font-style: oblique;
-  width: 420px;
-  height: 317px;
-  padding: 30px;
-  margin: 20px;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  background: url("src/water/water4.jpg") 80%;
-  color: #ffffff;
+.article1 {
+  background: url("src/water/water.jpg");
+}
+
+.article2 {
+  background: url("src/water/water4.jpg")
 }
 
 .here1 {
