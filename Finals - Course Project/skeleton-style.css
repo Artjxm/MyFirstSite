@@ -51,19 +51,13 @@ body {
 
 .content {
   flex: 1 0 auto;
+  border: 2px dashed #a4a4a4;
+  position: relative;
+  text-align: initial;
 }
 
 #footer {
   flex-shrink: 0;
-}
-
-.content {
-  border: 2px dashed #a4a4a4;
-  position: relative;
-}
-
-#footer {
   border: 2px dashed #6e6e6e;
   font-family: Bahnschrift, serif;
 }
-
