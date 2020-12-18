@@ -30,7 +30,7 @@
 }
 
 .article1 {
-  background: url("src/water/water.jpg");
+  background: url("src/water/water.jpg ") 1%;
 }
 
 .article2 {
@@ -45,7 +45,7 @@
 }
 
 .here2 {
-  /*Ссылка в первом блоке*/
+  /*Ссылка во втором блоке*/
   color: #ff4221;
   font-weight: 1000;
   background: #1a1a1a;
