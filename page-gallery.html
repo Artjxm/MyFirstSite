@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+  <title>Галерея</title>
+
+  <link rel="stylesheet" href="skeleton-style.css" type="text/css">
+  <link rel="stylesheet" href="gallery-style.css" type="text/css">
+
+  <link rel="shortcut icon" href="src/favicon/favicon.ico" type="image/png">
+  <link rel="icon" type="image/png" sizes="32x32" href="src/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="src/favicon/favicon-16x16.png">
+</head>
+<body>
+
+<div class="navigation">
+  <ul class="menu-list">
+    <li><a href="index.html">О магазине</a></li>
+    <li><a href="page-catalogue.html">Каталог</a></li>
+    <li><div  class="logo">
+      <object data="src/nicerLogo3.svg" width="450px" height="200px">broke</object>
+    </div></li>
+    <li><a href="page-gallery.html">Галерея</a></li>
+    <li><a href="#footer">Контакты</a></li>
+  </ul>
+</div>
+
+<div class="content">
+
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 6</div>
+    <img src="src/earrings/earring44.jpg" style="width: 100%">
+    <div class="text">Серьги "GOOD VIBES"</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 6</div>
+    <img src="src/necklace/necklace44.jpg" style="width: 100%">
+    <div class="text">Ожерелье "Легендарное"</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 6</div>
+    <img src="src/rings/ring24.jpg" style="width: 100%">
+    <div class="text">Кольцо широкое</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 6</div>
+    <img src="src/earrings/earring34.jpg" style="width: 100%">
+    <div class="text">Серьги шестигранные</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 6</div>
+    <img src="src/rings/ring33.jpg" style="width: 100%">
+    <div class="text">Кольцо грубое</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">6 / 6</div>
+    <img src="src/necklace/necklace43.jpg" style="width: 100%">
+    <div class="text">Ожерелье "Легендарное" </div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+  </div>
+
+</div>
+
+<div id="footer"><p>Московка Артём Александрович
+  ИКБО-20-19<br>РТУ МИРЭА 2020</p>
+</div>
+
+<script src="Scripts.js"></script>
+
+</body>
+</html>
