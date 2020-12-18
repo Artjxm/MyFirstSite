@@ -7,6 +7,7 @@
   scroll-behavior: smooth; /*Плавная прокрутка к якорю*/
   transition: .3s linear; /*Более плавный и переход при масштабировании*/
   text-decoration: none; /* Убираем подчеркивание ссылок */
+  font-family: Bahnschrift, serif;
 }
 
 html, body {
@@ -36,7 +37,6 @@ body {
   display: block;
   color: #333333;
   white-space: nowrap;
-  font-family: Bahnschrift, serif;
 }
 
 .menu-list .link-logo {
@@ -51,12 +51,11 @@ body {
 
 .content {
   flex: 1 0 auto;
-  border: 2px dashed #a4a4a4;
+  /*border: 2px dashed #a4a4a4;*/
   position: relative;
 }
 
 #footer {
   flex-shrink: 0;
-  border: 2px dashed #6e6e6e;
-  font-family: Bahnschrift, serif;
+  /*border: 2px dashed #6e6e6e;*/
 }

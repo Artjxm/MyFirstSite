@@ -1,0 +1,80 @@
+/*Оформление страниц с товаром*/
+* {
+  box-sizing: border-box;
+}
+
+.content {
+  display: flex;
+  /*flex-wrap: wrap;*/
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.smaller-images {
+  width: 16.66%;
+  order: 1;
+}
+
+.demo {
+  opacity: 0.7;
+}
+
+.demo:hover {
+  opacity: 1;
+}
+
+.bigger-image {
+  width: 50%;
+  order: 2;
+}
+
+.about-item {
+  order: 3;
+  width: 30%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.textblock {
+  /*border: 2px dashed orange;*/
+}
+
+.firstLetter {
+  color: #6164bc;
+  font-size: 1.4em;
+}
+
+.selector {
+  width: 52%;
+}
+
+.buy {
+  padding: 5px 8px;
+  background: url("src/water/water2.jpg") 90%;
+  color: #ffd136
+}
+
+.out-of-stock {
+  opacity: 70%;
+  border: 1px dashed grey;
+  font-size: 14px;
+  width: 40%;
+  margin: 5px auto auto;
+  font-weight: bold;
+}
+
+.ring-link {
+  background: #515e96;
+  color: #ffd620;
+}

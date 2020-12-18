@@ -1,10 +1,6 @@
 /*Данный файл содержит все необходимое для оформления
 внутреннего блока страницы page-catalogue*/
 
-* {
-  font-family: Bahnschrift, serif;
-}
-
 .content {
   display: flex;
   flex-direction: column;
