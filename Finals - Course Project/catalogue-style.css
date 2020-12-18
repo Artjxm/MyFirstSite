@@ -1,0 +1,64 @@
+/*Данный файл содержит все необходимое для оформления
+внутреннего блока страницы page-catalogue*/
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.category {
+  font-family: Bahnschrift, serif;
+  font-size: 18px;
+  font-style: italic;
+  text-align: center;
+  color: #333333;
+  padding: 20px 0;
+  text-underline-mode: 1;
+}
+
+.items {
+  display: flex;
+  justify-content: space-between;
+  max-width: content-box;
+  flex-wrap: wrap;
+}
+
+.catalogue-image {
+  width: 270px;
+}
+
+.item-wrapper {
+  position: relative;
+}
+
+.item-wrapper:hover .description-layer {
+  visibility: visible;
+  opacity: 1;
+}
+
+.item-wrapper:hover .description {
+  transform: scale(.8);
+}
+
+.description-layer {
+  position: absolute;
+  top: 200px;
+  bottom: 4px;
+  left: 0;
+  right: 0;
+  background: #fcf1f1;
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: opacity .5s, visibility .5s;
+}
+
+.description {
+  transition: .5s;
+  font-weight: 1000;
+  text-decoration: none;
+  color: #5a5a5a;
+}

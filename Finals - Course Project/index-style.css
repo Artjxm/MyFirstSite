@@ -1,0 +1,57 @@
+/*Данный файл содержит оформление страницы index(page-about)*/
+.firstLetter {
+  color: #ffdc49;
+  font-size: 2em;
+}
+
+.content {
+  /*Блок содержимого сайта "О магазине"*/
+  display: flex;
+  /*border: 2px dashed blueviolet;*/
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.about-article {
+  /*Текстовый блок на голубом фоне*/
+  font-family: Bahnschrift, serif;
+  font-size: 18px;
+  font-style: oblique;
+  width: 420px;
+  height: 317px;
+  padding: 30px;
+  margin: 20px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+.article1 {
+  background: url("src/water/water.jpg ") 1%;
+}
+
+.article2 {
+  background: url("src/water/water4.jpg")
+}
+
+.here1 {
+/*Ссылка в первом блоке*/
+  color: #ffdc49;
+  font-weight: 1000;
+  background: #1f3888;
+}
+
+.here2 {
+  /*Ссылка во втором блоке*/
+  color: #ff4221;
+  font-weight: 1000;
+  background: #1a1a1a;
+}
+
+.about-image {
+  margin: 20px;
+}
+
