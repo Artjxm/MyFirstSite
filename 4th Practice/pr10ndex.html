@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Практическая работа №4 - задача 10</title>
+  <style>
+    * {box-sizing: border-box;}
+    body {
+      margin: 0;
+      background-size: 10px 10px;
+    }
+    nav a {
+      display: block;
+      text-decoration: none;
+      outline: none;
+    }
+    .topmenu > li {
+      display: inline-block;
+      position: relative;
+    }
+    .topmenu > li > a {
+      font-family: "FORTNITE BATTLEFEST", sans-serif;
+      height: 70px;
+      line-height: 70px;
+      padding: 0 30px;
+      font-weight: lighter;
+      color: #003559;
+      text-transform: uppercase;
+      transition: .4s ease-in-out;
+    }
+    .submenu {
+      background: white;
+      border: 2px solid #003559;
+      position: absolute;
+      left: 0;
+      visibility: hidden;
+      opacity: 0;
+      z-index: 5;
+      width: 150px;
+      transform: perspective(600px) rotateX(-90deg);
+      transform-origin: 0 ;
+      transition: .6s ease-in-out;
+    }
+    .topmenu > li:hover .submenu {
+      visibility: visible;
+      opacity: 1;
+      transform: perspective(600px) rotateX(0deg);
+    }
+    .submenu li a {
+      color: #7f7f7f;
+      font-size: 13px;
+      line-height: 36px;
+      padding: 0 25px;
+      font-family: 'Kurale', serif;
+      transition: .4s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <ul class="topmenu">
+    <li><a href="">Дом</a></li>
+    <li><a href="" class="down">Блок</a>
+      <ul class="submenu">
+        <li><a href="">A</a></li>
+        <li><a href="">B</a></li>
+        <li><a href="">C</a></li>
+        <li><a href="">D</a></li>
+      </ul>
+    </li>
+    <li><a href="">Комната</a></li>
+  </ul>
+</nav>
+</body>
+</html>
+

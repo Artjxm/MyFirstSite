@@ -1,0 +1,64 @@
+
+.erste {
+  font-family: Bahnschrift,  serif;
+  font-size: 16px;
+  width: 640px;
+  text-align: left;
+  border-collapse: collapse;
+  background: #dce5fa;
+  margin: 10px;
+}
+.erste th {
+  color: #ff7214;
+  border-bottom: 2px solid #414141;
+  padding: 12px 17px;
+}
+.erste td {
+  color: #2a4c7a;
+  border-bottom: 2px dashed #414141;
+  padding: 7px 17px;
+  font-family: Consolas, serif;
+  font-style: italic;
+}
+.erste tr:last-child td {
+  border-bottom: none;
+}
+.erste td:last-child {
+  border-right: none;
+}
+.erste tr:hover td {
+  background: #b8dfea;
+}
+
+
+.zweite {
+  font-family: "Courier New",  serif;
+  font-size: 16px;
+  width: 640px;
+  text-align: left;
+  border-collapse: collapse;
+  background-image: url("water3.jpg");
+  margin: 10px;
+}
+.zweite th {
+  color: #fff700;
+  border-bottom: 2px  #e0e0e0;
+  padding: 12px 17px;
+  background: #2f322e;
+}
+.zweite td {
+  color: #ffffff;
+  border-bottom: 2px solid #e0e0e0;
+  padding: 7px 17px;
+  font-family: Consolas, serif;
+  font-style: italic;
+}
+.zweite tr:last-child td {
+  border-bottom: none;
+}
+.zweite td:last-child {
+  border-right: none;
+}
+.zweite tr:hover td {
+  opacity: 80%;
+}

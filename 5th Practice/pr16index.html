@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Практическая работа №5 - задача 16</title>
+</head>
+<body>
+<script>
+    var obj = {green: 'зеленый', red: 'красный', blue: 'голубой'};
+    document.write("Задача 16.1: obj = {");
+    for (key in obj)
+      if (key !== 'blue')
+      document.write(key, ": '", obj[key], "', ");
+      else
+      document.write(key, ": '", obj[key], "'}<br>Задача 16.2:<br>");
+    obj = {Коля: 200, Вася: 300, Петя: 400};
+    for (key in obj)
+      document.write(key + ' - зарплата ' + obj[key] + ' долларов' + '<br>');
+</script>
+</body>
+</html>

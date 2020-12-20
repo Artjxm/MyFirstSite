@@ -1,0 +1,51 @@
+  <!DOCTYPE html>
+  <html>
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Практическая работа №4 - задача 11</title>
+  </head>
+
+<body>
+<input type="checkbox" />
+<input type="checkbox" checked />
+<input type="text" id="message" />
+
+<h3 id="widget-title">Сообщения:</h3>
+<ul id="messages">
+  <li id="message-1">Сообщение 1</li>
+  <li id="message-2">Сообщение 2</li>
+  <li id="message-3" data-action="delete">Сообщение 3</li>
+  <li id="message-4" data-action="edit do-not-delete">Сообщение 4</li>
+  <li id="message-5" data-action="edit delete">Сообщение 5</li>
+  <li><a href="#">...</a></li>
+</ul>
+
+<a href="http://site.com/list.zip">Ссылка на архив</a>
+<a href="http://site.com/list.pdf">Ссылка на PDF</a>
+
+<script>
+  function checkQ(selector, count) {
+    var elems = document.querySelectorAll(selector);
+    var ok = elems.length == count;
+
+    if (!ok){
+      alert(selector + ": " + elems.length + " != " + count);
+    }else {
+      alert("OK");
+    }
+  }
+  checkQ('input[type="checkbox"]', 2);
+  checkQ('input[type="checkbox"]:not(:checked)', 1);
+  checkQ('[id|="message"]', 6);
+  checkQ('[id^="message-"]', 5);
+  checkQ('a[href$=".zip"]', 1);
+  checkQ('[data-action~="delete"]', 2);
+  checkQ('[data-action]:not([data-action~="delete"])', 1);
+  checkQ("#messages li:nth-child(2n)", 3);
+  checkQ("h3#widget-title + *", 1);
+  checkQ("h3#widget-title ~ a", 2);
+  checkQ("#messages li:last-child a", 1);
+</script>
+</body>
+</html>

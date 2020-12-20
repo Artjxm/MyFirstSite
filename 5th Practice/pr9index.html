@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Практическая работа №5 - задача 9</title>
+</head>
+<body>
+<script>
+    var arr = [ [1, 2, 3], [4, 5, 6], [7,8,9] ];
+    document.write("Задача 9.1: " + arr[1][0]);
+    var obj = {js:['jQuery', 'Angular'], php: 'hello', css: 'world'};
+    document.write("<br>Задача 9.2: " + obj['js'][0]);
+    var arr = {'ru': ['понедельник', 'вторник', 'среда', 'четверг', 'пятница',
+        'суббота', 'воскресенье'], 'en': ['monday', 'tuesday', 'wednesday',
+        'thursday', 'friday', 'saturday', 'sunday']}
+    document.write("<br>Задача 9.3: Сегодня " + arr['ru'][0] + ",\nА жаба говорит: " +
+    "\"Its " + arr['en'][2] + ", my dudes.\"");
+    var arr = { 'ru': ['понедельник', 'вторник', 'среда', 'четверг', 'пятница',
+        'суббота', 'воскресенье'], 'en': ['monday', 'tuesday', 'wednesday',
+        'thursday', 'friday', 'saturday', 'sunday']}
+      var lang = 'en';
+      var day = 6;
+      document.write("<br>Задача 9.4: " + arr[lang][day] + " \u2600");
+</script>
+</body>
+</html>
