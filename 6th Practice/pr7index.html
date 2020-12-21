@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Практическая работа №6 - задача 7</title>
+</head>
+<body>
+<script>
+  var arr = [12, 15, 20, 25, 59, 79],
+    average = arr.reduce((a, b) => a + b, 0) / arr.length,
+    n = 6, f = 1;
+  for (var i = 1; i <= n; ++i)
+    f *= i;
+
+  document.write("Задача 7.1: среднее арифметическое чисел = " +
+    average + "<br>Задача 7.2: факториал числа " + n + " = " + f);
+</script>
+</body>
+</html>
+

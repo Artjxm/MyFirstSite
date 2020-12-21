@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Практическая работа №6 - задача 9</title>
+</head>
+<body>
+<script>
+  var str2 = "я учу javascript!", str = 'there is a lot of letters' +
+    ' so let us be strong!', n = 35;
+  document.write("Задача 9.1: в строке 'я учу javascript!' " +
+  str2.length + " символов" + "<br>Задача 9.2:<br>сила <i>substr</i>, " +
+    "дай мне 'учу!' *magic!* -> " + str2.substr(2,3) + "<br>сила" +
+    " <i>substring</i>, дай мне 'учу!' *magic* -> " + str2.substring(2, 6) +
+  "<br>сила <i>slice</i>, дай мне 'учу!' *magic* -> " + str2.slice(2, -12) +
+  "<br>Задача 9.3: слово 'учу' начинается с " + (str2.indexOf("учу") +
+    1) + " позиции<br>Задача 9.4: ");
+
+  if (str.length > n)
+    document.write(str.substr(0, n) + "...");
+  else
+    document.write(str);
+</script>
+</body>
+</html>
+

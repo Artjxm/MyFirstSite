@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Практическая работа №6 - задача 11</title>
+</head>
+<body>
+<script>
+  var str = "я учу javascript!", arr = str.split(' ');
+  document.write("Задача 11.1: массив слов: [");
+  for (var i = 0; i < arr.length; ++i)
+    if (i === arr.length-1)
+      document.write('\'' + arr[i] + "']")
+  else
+      document.write('\'' + arr[i] + "', ")
+
+  arr = str.split('');
+  document.write("<br>Задача 11.2: массив символов: [");
+  for (i = 0; i < arr.length; ++i)
+    if (i === arr.length-1)
+      document.write('\'' + arr[i] + "']")
+    else
+      document.write('\'' + arr[i] + "', ")
+
+  date = '2020-11-18';
+  document.write("<br>Задача 11.3: " + date + " *puff!* " +
+    date.replace(/-/g, '.'));
+</script>
+</body>
+</html>
+

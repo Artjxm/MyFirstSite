@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Практическая работа №6 - задача 12</title>
+</head>
+<body>
+<script>
+  var arr = ['я', 'учу', 'javascript', '!'];
+  document.write("Задача 12.1: [");
+  for (var i = 0; i < arr.length; ++i)
+    if (i === arr.length-1)
+      document.write('\'' + arr[i] + "']");
+    else
+      document.write('\'' + arr[i] + "', ");
+
+  document.write(" *puff!* " + arr.join('+'));
+
+</script>
+</body>
+</html>
+

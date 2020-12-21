@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Практическая работа №6 - задача 18</title>
+</head>
+<body>
+<script>
+  var arr = [1, 2, 3, 4, 5]; arr.splice(1,2);
+  document.write("Задача 18.1: " + arr + "<br>Задача 18.2: ");
+
+  arr = [1, 2, 3, 4, 5]; var arr2 = arr.splice(1,3);
+  document.write(arr2); arr = [1, 2, 3, 4, 5]; arr.splice(3,0,'a','b','c');
+  document.write("<br>Задача 18.3: " + arr); arr = [1, 2, 3, 4, 5];
+
+  arr.splice(1,0,'a','b'); arr.splice(6,0,'c'); arr.splice(8,0,'e');
+  document.write("<br>Задача 18.4: " + arr);
+</script>
+</body>
+</html>
+

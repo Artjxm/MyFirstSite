@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Практическая работа №6 - задача 3</title>
+</head>
+<body>
+<script>
+  var sqrt = Math.sqrt(379);
+  document.write("Задача 3.1:<br> округление до целых: " +
+    Math.floor(sqrt) + "<br>округление до десятых: " +
+    sqrt.toFixed(1) + "<br>округление до сотых: " +
+    sqrt.toFixed(2));
+
+  sqrt = Math.sqrt(587);
+  var floor = Math.floor(sqrt), ceil = Math.ceil(sqrt);
+  document.write("<br><br>Задача 3.2:<br> округление в" +
+    " меньшую сторону: " + floor + "<br>округление в " +
+    "большую сторону: " + ceil);
+</script>
+</body>
+</html>
+
