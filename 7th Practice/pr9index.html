@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Практическая работа №7 - задание 9</title>
+  <style>
+    #elem{
+      width: 140px; height: 1100px;
+      border: 3px dashed #079f00;
+    }
+    #elem1{
+      width: 2700px; height: 100px;
+      border: 3px dashed #85523c;
+    }
+  </style>
+</head>
+<body>
+<div id="elem">Грибы́ (лат. Fungi или Mycota) — царство живой природы,  объединяющее эукариотические организмы,
+  сочетающие в себе некоторые  признаки как растений, так и животных. Грибы изучает наука микология,  которая считается
+  разделом ботаники, поскольку ранее грибы относили  к царству растений.  В узком смысле, с точки зрения биологической
+  систематики,  грибы — таксон, одно из царств живой природы. В старом же, более широком  смысле, термин потерял
+  значение таксона и обозначает эколого-трофическую  группу, объединяющую гетеротрофных эукариот с осмотрофным типом
+  питания.  Такие организмы по традиции продолжает изучать микология.</div>
+<br><button onclick="func()">Узнать</button>
+<script>function func(){ var elem = document.querySelector("elem"); alert(pageYOffset); }</script>
+<br><br>
+<div id="elem1">Многие виды грибов активно используются человеком в пищевых,  хозяйственных и медицинских целях. Блюда
+  из съедобных грибов традиционно  входят в национальные кухни многих народов мира. Во многих странах развито
+  промышленное выращивание съедобных грибов, производство материалов для  грибоводов-любителей. Микроскопические грибы
+  используются в пищевой  промышленности для приготовления напитков способом брожения, ферментации  различных пищевых
+  продуктов. Грибы — один из важнейших объектов  биотехнологии, применяемых для производства антибиотиков и других
+  лекарственных средств, некоторых химических веществ, используемых в пищевой  промышленности и в технических целях.
+</div><br>
+<button style = "width: 2000px" onclick="func1()">Узнать</button>
+<script> function func1(){ let elem1 = document.querySelector("elem");alert(pageXOffset);} </script>
+<button onclick="func2()">Прокрутить</button>
+<script>function func2(){ let elem = document.querySelector("elem"); scrollTo(300, 500); }</script>
+<button onclick="func3()">Прокрутить</button>
+<script>function func3(){ let elem = document.querySelector("elem"); scrollBy(0, 300); }</script>
+<button onclick="func4()">Прокрутить</button>
+<script>function func4(){ let elem = document.querySelector("elem"); scrollTo(0, document.body.offsetHeight); }
+</script><br>
+</body>
+</html>
+
+

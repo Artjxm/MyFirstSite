@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Практическая работа №7 - задание 5</title>
+</head>
+<p id="test">Здесь могла бы быть ваша реклама</p>
+<input type="submit" onclick="func()">
+<script>
+  function func(){
+    var elem=document.getElementById('test');
+    elem.innerHTML='<h2><i>Здесь могла бы быть ваша реклама</i></h2>';
+  }
+</script>
+<br>
+<br>
+<input id="first"> +
+<input id="second"> = <div style="DISPLAY: inline" id="result"></div>
+<br>
+<br>
+<button id="sum">Do the math</button>
+<script>
+  function sum() {
+    var f = document.getElementById('first').value;
+    var s = document.getElementById('second').value;
+    document.getElementById('result').innerHTML = Number(f) + Number(s);
+  }
+  document.getElementById('sum').addEventListener('click', sum);
+</script><br><br>
+<input id="text" placeholder="Insert text here mate">
+<div style="DISPLAY: inline" id="result1"></div><br><br>
+<button id="Out">Вывести выражение</button>
+<script>
+  function out() {
+    var f = document.getElementById('text').value;
+    document.getElementById('result1').innerHTML = f;
+  }
+  document.getElementById('Out').addEventListener('click', out);
+</script>
+<br>
+<br>
+<body>
+<p id="test1"><a href="https://www.google.ru/">ссылка 1</a><br>
+  <a href="https://www.tut.by/">ссылка 2</a><br>
+  <a href="https://yandex.ru/">ссылка 3</a></p>
+<button onclick="func2()">Нажмите на меня!</button>
+<script>
+  function func2(){
+    var elem=document.getElementById('test1');
+    elem.innerHTML='<p id="test1"><a href="https://www.google.ru/">' +
+      'ссылка 1(http://google.ru)</a><br> <a href="https://www.tut.by/">' +
+      'ссылка 2(http://tut.by)</a><br><a href="https://yandex.ru/">ссылка 3(http://yandex.ru)</a>';
+  }
+</script>
+</body>
+</html>

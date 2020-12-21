@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Практическая работа №7 - задание 7.3</title>
+</head>
+<body onload="go()">
+<div id="wrapper">
+  <p id="clock">
+    00:00:00
+  </p>
+</div>
+<script>
+  function go(){
+    window.timerId = window.setInterval(timer, 500);
+  }
+  function timer(){
+    var clock = document.getElementById('clock');
+    var date = new Date();
+    clock.innerHTML = addZero(date.getHours())+':'
+      +addZero(date.getMinutes())+':'+addZero(date.getSeconds());
+  }
+  function addZero(num){
+    if(num <=9) return '0'+num;
+    else return num;
+  }
+</script>
+</body>
+</html>

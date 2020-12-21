@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Практическая работа №7 - задание 3</title>
+</head>
+<body>
+<input type="text" value="Текстик" onfocus="change(this)">
+<br>
+<input type="submit" onclick="block(this)" value="Нажми, чтобы изменить текст" id="block">
+<br>
+<input type="submit" onclick="unblock('button')" value="Unblocked" style="display: none;" id="unblock">
+<br>
+<input type="submit" onclick="num(this)" value="0">
+<script>
+  function change(smthg){
+    smthg.value = 'Другой текстик';
+  }
+
+  function block(){
+    var block = document.getElementById('block');
+    var unblock = document.getElementById('unblock');
+    block.value = 'Blocked';
+    block.disabled = true;
+    unblock.style.display = 'block';
+  }
+
+  function unblock(){
+    var block = document.getElementById('block');
+    var unblock = document.getElementById('unblock');
+    block.value = 'Unblockled';
+    block.disabled = false;
+    unblock.style.display = 'none';
+  }
+
+  function num(smthg){
+    smthg.value = parseInt(smthg.value) + 1;
+  }
+</script>
+</body>
+</html>

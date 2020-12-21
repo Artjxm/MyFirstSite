@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <title>Практическая работа №7 - задание 11</title>
+  <style>
+    .carousel {position: relative; width: 600px; padding: 10px 40px;}
+    .carousel img {display: block;}
+    .arrow {position: absolute; top: 60px; display: block;}
+    .prev {left: 7px;}
+    .next {right: 7px;}
+    .gallery {overflow: hidden;}
+    .gallery ul {height: 130px; width: 1000px; margin: 0; padding: 0; list-style: none;
+      transition: margin-left 250ms; font-size: 0;}
+    .gallery li {display: inline-block;}
+  </style>
+</head>
+<body>
+<div id="carousel" class="carousel">
+  <button class="arrow prev"><</button>
+  <div class="gallery"><ul class="images">
+      <li><img style="width: 200px; height: 100px;" src="https://assets.epicurious.com/photos/5aec98d0cd4694640994c6cc/6:4/w_1024%2Cc_limit/cremini-mushrooms-050418.jpg" id="img1"></li>
+      <li><img style="width: 200px; height: 100px;" src="https://assets.epicurious.com/photos/5aec98d162009a01344db695/6:4/w_1024%2Cc_limit/portobello-mushrooms-050418.jpg" id="img2"></li>
+      <li><img style="width: 200px; height: 100px;" src="https://assets.epicurious.com/photos/5aec98d0bdc9cb7cd6eed828/6:4/w_1024%2Cc_limit/shiitake-mushrooms-050418.jpg" id="img3"></li>
+      <li><img style="width: 200px; height: 100px;" src="https://assets.epicurious.com/photos/5aec98ce32c9206db5f1a0bc/6:4/w_1024%2Cc_limit/maitake-mushrooms-050418.jpg" id="img4"></li>
+      <li><img style="width: 200px; height: 100px;" src="https://assets.epicurious.com/photos/5aec98d17e755a50582d1342/6:4/w_1024%2Cc_limit/oyster-mushroom-050418.jpg" id="img5"></li>
+    </ul></div>
+  <button class="arrow next">></button>
+</div>
+<script>
+  var list = carousel.querySelector('ul');
+  var listElems = carousel.querySelectorAll('li');
+  var position = 0;
+  carousel.querySelector('.prev').onclick = function() {
+    position += 200 * 2;
+    position = Math.min(position, 0)
+    list.style.marginLeft = position + 'px';
+  };
+  carousel.querySelector('.next').onclick = function() {
+    position -= 200 * 2;
+    position = Math.max(position, -200 * (listElems.length - 2));
+    list.style.marginLeft = position + 'px';
+  };
+</script>
+</body>
+</html>
+
+
+

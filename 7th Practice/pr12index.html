@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <title>Практическая работа №7 - задание 12</title>
+</head>
+<body>
+<ul class="tree" id="tree">
+  <li>Грибы
+    <ul>
+      <li>Вкусные
+        <ul>
+          <li>Свежие</li>
+          <li>Красивые</li>
+          <li>Мягкие</li>
+        </ul>
+      </li>
+      <li>Питательные
+        <ul>
+          <li>Полезные</li>
+          <li>Чистые</li>
+          <li>Автономные</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Натуральные
+    <ul>
+      <li>Самсор
+        <ul>
+          <li>Лесные</li>
+          <li>Полевые</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+<script>
+  for (let li of tree.querySelectorAll('li')) {
+    var span = document.createElement('span');
+    li.prepend(span);
+    span.append(span.nextSibling);
+  }
+  tree.onclick = function(event) {
+    if (event.target.tagName != 'SPAN')
+      return;
+    var childrenContainer = event.target.parentNode.querySelector('ul');
+    if (!childrenContainer) return;
+    childrenContainer.hidden = !childrenContainer.hidden;
+  }
+</script>
+</body>
+</html>
+
+
+
+

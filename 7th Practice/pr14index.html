@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <title>Практическая работа №7 - задание 14</title>
+</head>
+<body>
+<div id="contents">
+  <p>
+    Новость про зиму<a href="https://mixnews.lv/znaki-zodiaka/2020/12/20/zima-2020-2021-astrologicheskij-prognoz-dlya-blizneczov-i-telczov/">
+    Перейти по ссылке</a><br>Также еще куда-то<a href="https://mixnews.lv/mixer/"> Перейти по ссылке</a>.
+  </p>
+  </div>
+    <script>
+      contents.onclick = function(event) {
+        function handleLink(href) {
+          let isLeaving = confirm(`Leave for ${href}?`);
+          if (!isLeaving) return false;
+        }
+        var target = event.target.closest('a');
+        if (target && contents.contains(target))
+          return handleLink(target.getAttribute('href'));
+      };
+    </script>
+</body>
+</html>
+
+
+
+

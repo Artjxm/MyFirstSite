@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Практическая работа №7 - задание 2</title>
+</head>
+<body>
+<button onclick="buttonClick()">Wake up</button>
+<input type="text" id="input" value="I sleep">
+<p>
+  <button onclick="buttonClick1()">Билли, пора вставать</button>
+  <img id="foto" src="https://2ch.hk/b/src/224395169/15943936293120.jpg"
+       style="width: 300px; height: 250px;" >
+</p>
+<script>
+  function buttonClick() {
+    var input = document.getElementById('input');
+    input.value = 'I woke';
+  }
+</script>
+<script >
+  function buttonClick1() {
+    var img = document.getElementById('foto');
+    img.src = 'https://encrypted-tbn0.gstatic.com/images' +
+      '?q=tbn:ANd9GcTzOzNsrF9WDtYzuyO4_00-O9S5tTVIV3hjLw&usqp=CAU';
+  }
+</script>
+</body>
+</html>

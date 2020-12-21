@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Практическая работа №7 - задание 6</title>
+</head>
+<body>
+<p>Станет курсивом</p>
+<p>Не изменится</p>
+<p>Станет больше</p>
+<input type="submit" onclick="func()">
+<script>
+  function func(){
+    var elems=document.getElementsByTagName('p');
+    elems[0].innerHTML='<i>Сделайте меня курсивом</i>';
+    elems[1].innerHTML='Мне итак хорошо';
+    elems[2].innerHTML='<h2>Сделайте меня больше<h2>';
+  }
+</script><br><br>
+<div>ряд</div><br>
+<div>ряд</div><br>
+<div>ряд</div><br>
+<button onclick="func1()">Do the magic!</button>
+<script>
+  function func1(){
+    var elems1=document.getElementsByTagName('div');
+    for(var i =0; i <elems1.length; i++)
+      elems1[i].innerHTML=i + '. ряд';
+  }
+</script>
+</body>
+</html>

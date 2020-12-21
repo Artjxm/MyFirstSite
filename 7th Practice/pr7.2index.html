@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Практическая работа №7 - задание 7.2</title>
+</head>
+<body>
+  <p id="test">0</p>
+  <input type="submit" value="Пуск"  onclick="go()" id="go">
+  <input type="submit" value="Стоп"  onclick="stop()"  id="stop" disabled>
+<script>
+  function go(){
+    window.timerId = window.setInterval(timer, 1000);
+    document.getElementById('go').disabled = true;
+    document.getElementById('stop').disabled = false;
+  }
+  function stop(){
+    window.clearInterval(window.timerId);
+    document.getElementById('go').disabled = false;
+    document.getElementById('stop').disabled = true;
+  }
+  function timer(){
+    var test = document.getElementById('test');
+    test.innerHTML = parseInt(test.innerHTML)+1;
+  }
+</script>
+</body>
+</html>

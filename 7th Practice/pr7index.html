@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Практическая работа №7 - задание 7.1</title>
+</head>
+<body>
+  <p id="test">
+    0
+  </p>
+  <input type="submit" value="Начнем отсчет"  onclick="go()">
+<script>
+  function go(){
+    window.setInterval(timer, 1000);
+  }
+  function timer(){
+    var test = document.getElementById('test');
+    test.innerHTML = parseInt(test.innerHTML)+1;
+  }
+</script>
+</body>
+</html>

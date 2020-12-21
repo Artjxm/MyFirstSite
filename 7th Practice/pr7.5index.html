@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Практическая работа №7 - задание 7.5</title>
+</head>
+<body>
+  <img width="100px" src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/articles/health_tools/berries_and_their_health_benefits_slideshow/493ss_thinkstock_rf_bowl_of_fresh_bluberries_on_wooden_table.jpg" id="img1">
+  <img width="100px" src="https://cdn.shopify.com/s/files/1/0273/0888/4073/articles/blackberries-1045728_1920_3_800x553.jpg?v=1589916052" id="img2">
+  <img width="100px" src="https://www.thermofisher.com/blog/wp-content/uploads/2015/03/red_current_berries_isolated.jpg" id="img3">
+  <img width="100px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Berberis_thunbergii_berries.jpg/1200px-Berberis_thunbergii_berries.jpg" id="img4">
+  <img width="100px" src="https://post.healthline.com/wp-content/uploads/2019/03/wild-berries-salmonberry-1024x575.jpg" id="img5">
+  <p>
+    <input type="submit" value="Запустить карусель!" onclick="go()" id="go">
+    <input type="submit" value="Остановить карусель!" onclick="stop()" id="stop" disabled>
+  </p>
+<script>
+  function go(){
+    window.timerId = window.setInterval(timer, 1000);
+    document.getElementById('go').disabled = true;
+  }
+  function go(){
+    window.timerId = window.setInterval(timer, 1000);
+    document.getElementById('go').disabled = true;
+    document.getElementById('stop').disabled = false;
+  }
+  function stop(){
+    window.clearInterval(window.timerId);
+    document.getElementById('go').disabled = false;
+    document.getElementById('stop').disabled = true;
+  }
+  function timer(){
+    var img1 = document.getElementById('img1');
+    var img2 = document.getElementById('img2');
+    var img3 = document.getElementById('img3');
+    var img4 = document.getElementById('img4');
+    var img5 = document.getElementById('img5');
+    var tmp = img1.src;
+    img1.src = img2.src;
+    img2.src = img3.src;
+    img3.src = img4.src;
+    img4.src = img5.src;
+    img5.src = tmp;
+  }
+</script>
+</body>
+</html>

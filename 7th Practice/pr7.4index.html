@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Практическая работа №7 - задание 7.4</title>
+</head>
+<body>
+  <img width="100px" src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Amanita_muscaria_%28fly_agaric%29.JPG" id="img1">
+  <img width="100px" src="https://media.npr.org/assets/img/2018/02/02/enoki-promo_wide-5f65ced60025d4ef144f006496ccf5d00ca04021.jpg?s=1400" id="img2">
+  <img width="100px" src="https://anotherimg-dazedgroup.netdna-ssl.com/900/azure/another-prod/320/9/329019.jpg" id="img3">
+  <img width="100px" src="https://assets.epicurious.com/photos/5aec9cc432c9206db5f1a0be/master/w_2000,h_1333,c_limit/porcini-mushroom-050418.jpg" id="img4">
+  <p><input type="submit" value="Lets roll" onclick="carousel()" id="carousel"></p>
+<script>
+  function carousel(){
+    window.timerId = window.setInterval(timer, 1000);
+    document.getElementById('carousel').disabled = true;
+  }
+  function timer(){
+    var img1 = document.getElementById('img1');
+    var img2 = document.getElementById('img2');
+    var img3 = document.getElementById('img3');
+    var img4 = document.getElementById('img4');
+    var tmp = img1.src;
+    img1.src = img2.src;
+    img2.src = img3.src;
+    img3.src = img4.src;
+    img4.src = tmp;
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <title>Практическая работа №7 - задание 13</title>
+  <style>
+    body {
+      height: 2000px;
+    }
+    .tooltip {
+      position: fixed;
+      padding: 10px 20px;
+      text-align: center;
+      background: #d46969;
+    }
+  </style>
+</head>
+<body>
+<br>
+<button data-tooltip="Подсказка 1">Tip #1</button>
+<button data-tooltip="Подсказка 2">Tip #2</button>
+<script>
+  var tooltipElem;
+  document.onmouseover = function(event) {
+    var target = event.target;
+    var tooltipHtml = target.dataset.tooltip;
+    if (!tooltipHtml) return;
+    tooltipElem = document.createElement('div');
+    tooltipElem.className = 'tooltip';
+    tooltipElem.innerHTML = tooltipHtml;
+    document.body.append(tooltipElem);
+    var coords = target.getBoundingClientRect();
+    var left = coords.left + (target.offsetWidth - tooltipElem.offsetWidth) / 2;
+    if (left < 0) left = 0;
+    var top = coords.top - tooltipElem.offsetHeight - 5;
+    if (top < 0) {
+      top = coords.top + target.offsetHeight + 5;
+    }
+    tooltipElem.style.left = left + 'px';
+    tooltipElem.style.top = top + 'px';
+  };
+  document.onmouseout = function(e) {
+    if (tooltipElem) {
+      tooltipElem.remove();
+      tooltipElem = null;
+    }
+  };
+</script>
+</body>
+</html>
+
+
+
+
