@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Практическая работа №8 - задание 1</title>
+  <style>
+  #kchaw {
+    position: relative;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<img id="kchaw"
+  src="https://lh3.googleusercontent.com/proxy/tqdsVAsLvOGAdxuz9ytEghoxD2bBjqLwGLiByuAXRogq_gYRAftMO12tFpsDEQfuFYcSAtVgRAijNtGd52XRiAh5zK0yClCR-nWTKbA">
+<script>
+  kchaw.onclick = function() {
+    let start = Date.now();
+    let timer = setInterval(function() {
+      let timePassed = Date.now() - start;
+      kchaw.style.left = timePassed / 6 + 'px';
+      if (timePassed > 2000) clearInterval(timer);
+    }, 10);
+  }
+</script>
+
+</body>
+</html>
