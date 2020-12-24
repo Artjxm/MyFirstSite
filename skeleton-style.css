@@ -11,40 +11,40 @@
 }
 
 html, body {
-  height: 100%; /*Важно для отображения футера*/
+height: 100%; /*Важно для отображения футера*/
 }
 
 body {
-  background: #888888;
+  background: #888;
   background: url("src/backgruuund.png") center no-repeat; /*Фон*/
-  width: 60%;
+}
+
+.everything {
   margin: auto;
   text-align: center; /* Центрируем текст страницы */
-
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  width: 60%;
 }
 
-.menu-list {
-  list-style-type: none; /* Убираем маркеры */
-  display: inline-flex; /* Горизонтальное расположение элементов */
-  height: 200px;
-}
-
-.menu-list a {
-  padding: 90px 20px;
+.navigation {
+  /*border: 2px dashed red;*/
+  padding: 0 0 20px 0;
   font-weight: bold;
-  display: block;
-  color: #333333;
+  display: flex;
   white-space: nowrap;
+  justify-content: center;
 }
 
-.menu-list .link-logo {
-  padding: 0; /* Избавляемся от рамок вокруг изображения */
-  height: 200px; /* Фиксированная высота */
+.navigation a {
+  padding: 80px 10px;
+  vertical-align: center;
+  text-decoration: none;
+  color: #333333;
 }
 
-.menu-list a:hover {
+.navigation a:hover {
   background-color: #fcf1f1;
   opacity:  55%;
 }
@@ -53,9 +53,60 @@ body {
   flex: 1 0 auto;
   /*border: 2px dashed #a4a4a4;*/
   position: relative;
+
 }
 
 #footer {
   flex-shrink: 0;
   /*border: 2px dashed #6e6e6e;*/
+}
+
+@media (max-width: 700px) {
+ .navigation {
+   flex-direction: column;
+   width: 100%;
+ }
+
+  .everything {
+    width: 100%;
+  }
+
+  .navigation img {
+    width: 100%;
+    order: -1;
+  }
+
+  .navigation a {
+    padding: 12px 0;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .item-wrapper {
+    width: 100%;
+  }
+
+  .bigger-image {
+    order: 1;
+    width: 100%;
+  }
+
+  .smaller-images {
+    order: 2;
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+  }
+
+  .about-item {
+    order: 3;
+    width: 100%;
+  }
+
+  .content-item {
+    flex-direction: column;
+    display: flex;
+  }
 }
